@@ -27,10 +27,6 @@ jobs:
 
       - id: pages
         uses: actions/configure-pages@v5
-        with:
-          # Auto-enable GitHub Pages (Actions source) so no manual repo
-          # settings step is needed for the first preview deployment.
-          enablement: true
 
       - run: npm ci
 
