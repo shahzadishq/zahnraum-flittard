@@ -1,6 +1,13 @@
 import { directionsUrl, legal, navigation, practice, social, withBase } from "@/content/site";
 import { Logo } from "./Logo";
 import { ConsentSettingsButton } from "./ConsentManager";
+import { FacebookIcon, InstagramIcon, WhatsappIcon } from "./Icons";
+
+const socialLinks = [
+  { label: "Instagram", href: social.instagram, Icon: InstagramIcon },
+  { label: "Facebook", href: social.facebook, Icon: FacebookIcon },
+  { label: "WhatsApp", href: social.whatsapp, Icon: WhatsappIcon },
+];
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -13,22 +20,20 @@ export function Footer() {
             <p className="mt-5 max-w-xs text-sm leading-relaxed">
               Ihre Zahnarztpraxis in Köln-Flittard – herzlich und auf Augenhöhe.
             </p>
-            <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
-              <li>
-                <a href={social.instagram} target="_blank" rel="noopener" className="text-teal-300 hover:text-white">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href={social.facebook} target="_blank" rel="noopener" className="text-teal-300 hover:text-white">
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a href={social.whatsapp} target="_blank" rel="noopener" className="text-teal-300 hover:text-white">
-                  WhatsApp
-                </a>
-              </li>
+            <ul className="mt-6 flex flex-wrap items-center gap-3">
+              {socialLinks.map(({ label, href, Icon }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={label}
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/80 transition-colors hover:border-white/40 hover:bg-white/10 hover:text-teal-300"
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
