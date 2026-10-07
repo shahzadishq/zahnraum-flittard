@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/LegalPage";
 import { impressum } from "@/content/legal";
 
 export const metadata: Metadata = {
-  title: "Impressum | Elara Zahnmedizin",
+  title: "Impressum | Zahnraum Flittard",
 };
 
 export default function Page() {

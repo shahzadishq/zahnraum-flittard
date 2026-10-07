@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/LegalPage";
 import { datenschutz } from "@/content/legal";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Elara Zahnmedizin",
+  title: "Datenschutzerklärung | Zahnraum Flittard",
 };
 
 export default function Page() {

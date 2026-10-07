@@ -1,4 +1,4 @@
-import { directionsUrl, legal, navigation, practice, withBase } from "@/content/site";
+import { directionsUrl, legal, navigation, practice, social, withBase } from "@/content/site";
 import { Logo } from "./Logo";
 import { ConsentSettingsButton } from "./ConsentManager";
 
@@ -11,8 +11,25 @@ export function Footer() {
           <div className="md:col-span-4">
             <Logo variant="light" className="h-11 w-auto" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed">
-              Ihre Zahnarztpraxis in Meitingen – persönlich und verständlich.
+              Ihre Zahnarztpraxis in Köln-Flittard – herzlich und auf Augenhöhe.
             </p>
+            <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+              <li>
+                <a href={social.instagram} target="_blank" rel="noopener" className="text-teal-300 hover:text-white">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href={social.facebook} target="_blank" rel="noopener" className="text-teal-300 hover:text-white">
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href={social.whatsapp} target="_blank" rel="noopener" className="text-teal-300 hover:text-white">
+                  WhatsApp
+                </a>
+              </li>
+            </ul>
           </div>
 
           <nav aria-label="Footer-Navigation" className="md:col-span-2">

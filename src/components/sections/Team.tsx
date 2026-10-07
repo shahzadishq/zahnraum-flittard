@@ -1,51 +1,67 @@
 import Image from "next/image";
-import { images, integrations, team } from "@/content/site";
+import { team } from "@/content/site";
 import { AppointmentLink } from "../Cta";
 import { Rich } from "../Rich";
 
+function initials(name: string) {
+  return name
+    .replace(/^Dr\.?\s+/i, "")
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+}
+
 export function Team() {
-  const img = images.teamGroup;
   return (
-    <section id="team" aria-labelledby="team-title" className="py-20 sm:py-24 lg:py-32">
+    <section id="team" aria-labelledby="team-title" className="bg-sand py-20 sm:py-24 lg:py-28">
       <div className="container-page">
-        <div className="relative">
-          <Image
-            src={img.src}
-            alt={img.alt}
-            width={img.width}
-            height={img.height}
-            loading="lazy"
-            sizes="(min-width: 1216px) 1136px, 100vw"
-            className="aspect-[4/3] h-auto w-full rounded-[1.75rem] object-cover object-[62%_center] shadow-soft sm:aspect-[16/9] lg:rounded-[2.25rem]"
-          />
-          <div className="relative -mt-16 mx-3 rounded-[1.5rem] border border-line bg-white p-7 shadow-lift sm:mx-8 sm:p-9 lg:absolute lg:bottom-10 lg:left-10 lg:mx-0 lg:mt-0 lg:max-w-md">
-            <p className="eyebrow">{team.eyebrow}</p>
-            <h2 id="team-title" className="heading-lg mt-3 text-balance">
-              <Rich text={team.title} />
-            </h2>
-            <p className="mt-4 leading-relaxed text-muted">{team.text}</p>
-            <AppointmentLink location="team" className="btn-primary mt-6" />
-          </div>
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow mx-auto">{team.eyebrow}</p>
+          <h2 id="team-title" className="heading-lg mt-4 text-balance">
+            <Rich text={team.title} />
+          </h2>
+          <p className="mt-5 text-[1.05rem] leading-relaxed text-muted">{team.text}</p>
         </div>
 
-        {team.members.length > 0 && (
-          <ul className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {team.members.map((m) => (
-              <li key={m.name}>
-                <h3 className="text-xl font-extrabold text-navy-900">{m.name}</h3>
-                <p className="text-sm font-semibold text-teal-700">{m.role}</p>
-                {m.bio && <p className="mt-2 text-muted">{m.bio}</p>}
-              </li>
-            ))}
-          </ul>
-        )}
+        <ul className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
+          {team.members.map((m) => (
+            <li
+              key={m.name}
+              className="flex h-full flex-col rounded-[1.5rem] border border-line bg-white p-7 shadow-soft sm:p-8"
+            >
+              <div className="flex items-center gap-4">
+                {m.image ? (
+                  <Image
+                    src={m.image}
+                    alt={`${m.name} – ${m.role}`}
+                    width={72}
+                    height={72}
+                    loading="lazy"
+                    className="h-[4.5rem] w-[4.5rem] shrink-0 rounded-full object-cover ring-2 ring-navy-100"
+                  />
+                ) : (
+                  <span
+                    aria-hidden="true"
+                    className="inline-flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center rounded-full bg-navy-800 text-xl font-extrabold text-white"
+                  >
+                    {initials(m.name)}
+                  </span>
+                )}
+                <div>
+                  <h3 className="text-xl font-extrabold tracking-tight text-navy-900">{m.name}</h3>
+                  <p className="text-sm font-semibold text-teal-700">{m.role}</p>
+                </div>
+              </div>
+              {m.bio && <p className="mt-5 leading-relaxed text-muted">{m.bio}</p>}
+            </li>
+          ))}
+        </ul>
 
-        {integrations.reviewMode && team.members.length === 0 && (
-          <p className="mt-8 rounded-xl border border-dashed border-amber-600 bg-amber-50 p-4 text-sm text-amber-900">
-            Entwurf: Namen, Funktionen und Kurzprofile des Teams wurden noch nicht geliefert und
-            werden nach Freigabe ergänzt.
-          </p>
-        )}
+        <div className="mt-12 text-center">
+          <AppointmentLink location="team" className="btn-primary" />
+        </div>
       </div>
     </section>
   );

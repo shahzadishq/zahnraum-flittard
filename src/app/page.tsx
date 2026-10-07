@@ -5,9 +5,6 @@ import { Intro } from "@/components/sections/Intro";
 import { Services } from "@/components/sections/Services";
 import { Reasons } from "@/components/sections/Reasons";
 import { Team } from "@/components/sections/Team";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Process } from "@/components/sections/Process";
-import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
 import { images, integrations, practice, seo, withBase } from "@/content/site";
 
@@ -37,7 +34,7 @@ function structuredData() {
     ...(url && {
       url,
       image: new URL(images.consultation.src, url).href,
-      logo: new URL(withBase("/images/elara-logo.svg"), url).href,
+      logo: new URL(withBase("/images/zahnraum-mark.svg"), url).href,
     }),
   };
 }
@@ -50,11 +47,8 @@ export default function Home() {
         <Hero />
         <Intro />
         <Services />
-        <Process />
         <Reasons />
-        <Testimonials />
         <Team />
-        <Faq />
         <Contact />
       </main>
       <Footer />

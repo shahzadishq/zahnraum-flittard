@@ -8,7 +8,7 @@ export function LegalPage({ title, sections }: { title: string; sections: LegalS
     <>
       <header className="border-b border-line bg-white">
         <div className="container-page flex h-[4.25rem] items-center justify-between">
-          <Link href="/" className="-ml-1 rounded-md p-1" aria-label="Elara Zahnmedizin – zur Startseite">
+          <Link href="/" className="-ml-1 rounded-md p-1" aria-label="Zahnraum Flittard – zur Startseite">
             <Logo className="h-10 w-auto" />
           </Link>
           <Link href="/" className="text-sm font-semibold text-navy-800 link-underline">

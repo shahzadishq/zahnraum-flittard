@@ -67,7 +67,7 @@ export function Header() {
         open
           ? "border-b border-line bg-white"
           : scrolled
-            ? "border-b border-line/80 bg-white/95 shadow-[0_6px_24px_-18px_rgb(16_63_114/0.5)] backdrop-blur-md"
+            ? "border-b border-line/80 bg-white/95 shadow-[0_6px_24px_-18px_rgb(26_25_23/0.5)] backdrop-blur-md"
             : "border-b border-transparent bg-white"
       }`}
     >
@@ -78,7 +78,7 @@ export function Header() {
         Zum Inhalt springen
       </a>
       <div className="container-page flex h-[4.25rem] items-center justify-between gap-6 lg:h-[4.75rem]">
-        <a href="#top" className="-ml-1 shrink-0 rounded-md p-1" aria-label="Elara Zahnmedizin – zum Seitenanfang">
+        <a href="#top" className="-ml-1 shrink-0 rounded-md p-1" aria-label="Zahnraum Flittard – zum Seitenanfang">
           <Logo className="h-11 w-auto lg:h-12" />
         </a>
 

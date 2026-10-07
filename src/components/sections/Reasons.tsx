@@ -8,7 +8,7 @@ export function Reasons() {
       aria-labelledby="gruende-title"
       className="relative overflow-hidden bg-navy-900 py-20 text-white sm:py-24 lg:py-28"
     >
-      {/* the logo's tooth icon, as a quiet background motif */}
+      {/* the brand's tooth-and-leaf mark, as a quiet background motif */}
       <svg
         aria-hidden="true"
         viewBox="0 0 120 120"
@@ -19,6 +19,14 @@ export function Reasons() {
           fill="none"
           stroke="currentColor"
           strokeWidth="7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M60 47C70 57 70 72 60 83C50 72 50 57 60 47Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="6"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
