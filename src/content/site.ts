@@ -107,7 +107,51 @@ export const images = {
     height: 1024,
     alt: "Zahnärztliche Instrumente – Mundspiegel und Sonde – auf einer hellen Fläche in der Zahnarztpraxis Zahnraum Flittard",
   },
+  reception: {
+    src: withBase("/images/zahnraum-reception.webp"),
+    width: 1300,
+    height: 2311,
+    alt: "Heller, ruhiger Wartebereich der Zahnarztpraxis Zahnraum Flittard mit Sitzgelegenheiten, Holzboden und Pflanze",
+  },
 } as const;
+
+/** "Einblicke" gallery – real impressions from the practice. */
+export const gallery = {
+  eyebrow: "Einblicke",
+  title: "Einblicke in *unsere Praxis*.",
+  intro:
+    "Ein paar Eindrücke aus dem Zahnraum Flittard – von der sorgfältigen Versorgung bis zu den schönen Momenten.",
+  items: [
+    {
+      src: withBase("/images/zahnraum-brand-card.webp"),
+      width: 1000,
+      height: 1333,
+      alt: "Visitenkarte mit dem goldenen Logo von Zahnraum Flittard vor einer Pflanze",
+      caption: "Herzlich willkommen",
+    },
+    {
+      src: withBase("/images/zahnraum-work-inlays.webp"),
+      width: 1000,
+      height: 1333,
+      alt: "Hochwertiger Zahnersatz mit Inlays auf einem Gipsmodell",
+      caption: "Präzise, hochwertige Versorgung",
+    },
+    {
+      src: withBase("/images/zahnraum-work-retainer.webp"),
+      width: 1000,
+      height: 1333,
+      alt: "Individuell gefertigte Zahnschiene auf einem Gipsmodell",
+      caption: "Individuell gefertigte Schienen",
+    },
+    {
+      src: withBase("/images/zahnraum-opening.webp"),
+      width: 1000,
+      height: 1333,
+      alt: "Blumenstrauß zur Eröffnung der Zahnarztpraxis Zahnraum Flittard",
+      caption: "Eröffnung unserer Praxis",
+    },
+  ],
+};
 
 export const hero = {
   eyebrow: "Ihre Zahnarztpraxis in Köln-Flittard",

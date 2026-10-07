@@ -9,9 +9,11 @@
   --color-navy-800: #2b2824;
   --color-navy-700: #3d3932;
   --color-navy-100: #ece8df;
-  --color-teal-300: #7cc6cb;
-  --color-teal-500: #10868e;
-  --color-teal-700: #0b6169;
+  /* Accent tokens keep the "teal-*" names but now hold the logo gold, so every
+     accent on the page uses the brand gold instead of a green/teal. */
+  --color-teal-300: #e3c87a;
+  --color-teal-500: #c3a14b;
+  --color-teal-700: #8a6b2b;
   --color-gold-500: #c3a14b;
   --color-ivory: #f8f7f3;
   --color-sand: #f1efe8;
