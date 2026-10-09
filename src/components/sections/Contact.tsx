@@ -20,7 +20,7 @@ export function Contact() {
               data-track-location="contact"
               className="group flex items-center gap-4 rounded-2xl border border-white/15 bg-white/5 p-5 transition-colors hover:border-white/40 hover:bg-white/10"
             >
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-teal-500 text-navy-950">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 text-teal-300">
                 <PhoneIcon className="h-5 w-5" strokeWidth={2} />
               </span>
               <span>
