@@ -391,49 +391,50 @@ export const bookingProcess = {
   ] as { image: keyof typeof images; title: string; text: string }[],
 };
 
-/**
- * Patientenstimmen.
- *
- * ACHTUNG: Dies sind Platzhalter-Beispiele aus der Vorlage. Vor dem Livegang
- * bitte durch echte, freigegebene Bewertungen der Praxis ersetzen (z. B. aus
- * Google) – sonst nicht öffentlich anzeigen.
- */
+/** Patientenstimmen – echte 5-Sterne-Bewertungen von Google (Stand Oktober 2026). */
 export const testimonials = {
   eyebrow: "Stimmen unserer Patient:innen",
   title: "Was unsere Patientinnen und Patienten *sagen*.",
   items: [
     {
       quote:
-        "Sehr nette Zahnärztin, die ihre Arbeit sehr gut macht und sich Zeit für die Patienten nimmt. Auch das Team ist ausgesprochen freundlich. Kann man nur weiterempfehlen.",
-      name: "Alex B.",
+        "Ich war bereits bei Dr. Shiwa Kadir in der Praxis Köster & Laubrock Patient und bin jetzt auch in ihre eigene Praxis mitgegangen. Sie erklärt alles verständlich und ruhig. Spritzen und Bohren waren bei mir komplett schmerzfrei bzw. so angenehm wie möglich. Man fühlt sich gut aufgehoben. Klare Empfehlung!",
+      name: "Rawkus",
       source: "Google",
       rating: 5,
     },
     {
       quote:
-        "Kompetent und einfühlsam – es wird sich immer ausreichend Zeit genommen. Freundliches Praxisteam, moderne Räume und eine super Organisation mit kurzen Wartezeiten.",
-      name: "Maria T.",
+        "Eine wirklich tolle Zahnärztin! Sehr kompetent, freundlich und nimmt sich Zeit für ihre Patienten. Man fühlt sich direkt gut aufgehoben und ernst genommen. Ich war sehr zufrieden und komme gerne wieder.",
+      name: "Peshawa Ali",
       source: "Google",
       rating: 5,
     },
     {
       quote:
-        "Sehr herzlich und top Leistung. Man fühlt sich aufgehoben und wird immer freundlich empfangen – sowohl in der Praxis als auch am Telefon. Einfach rundum ein toller Service!",
-      name: "Michael R.",
+        "Sehr empfehlenswerte Zahnarztpraxis! Das Team ist sehr freundlich und professionell. Man fühlt sich von Anfang an gut aufgehoben. Die Behandlung war sorgfältig und nahezu schmerzfrei. Die Praxis ist modern, sauber und gut organisiert. Vielen Dank für die tolle Betreuung!",
+      name: "Karam Adil",
       source: "Google",
       rating: 5,
     },
     {
       quote:
-        "Fachlich sehr gut mit einem ausgesprochen tollen Team und guter Prophylaxe. Wir sind mit der ganzen Familie hier und immer sehr zufrieden. Kann man nur empfehlen.",
-      name: "Jennifer F.",
+        "Bin mehr als zufrieden mit dieser Praxis. Ich war wegen meiner Zahnschmerzen da und Dr. Shiwa Kadir ist sehr freundlich. Da ich Angstpatientin bin, erklärt sie in einzelnen Schritten, was gemacht werden muss, und ich fühle mich gut aufgehoben – und das zum ersten Mal bei einem Zahnarzt, weil ich in der Vergangenheit eigentlich nur Negatives erlebt habe. Daher 5 Sterne von mir und sehr zu empfehlen.",
+      name: "Melissa Diana",
       source: "Google",
       rating: 5,
     },
     {
       quote:
-        "Es wird alles verständlich erklärt und gut kommuniziert, dazu ein zuvorkommender Service. Komme auf jeden Fall wieder.",
-      name: "Richard S.",
+        "Super freundliche und kompetente Zahnärztin! Ich habe mich während der Behandlung sehr gut aufgehoben gefühlt. Alles wurde verständlich erklärt und sehr einfühlsam durchgeführt. Klare Empfehlung!",
+      name: "Guli Baran",
+      source: "Google",
+      rating: 5,
+    },
+    {
+      quote:
+        "Die Zahnärztinnen sind sehr lieb, fürsorglich und verständnisvoll. Sie fragen immer, ob wir Schmerzen haben. Ich bin sehr zufrieden und empfehle diese Praxis sehr.",
+      name: "Sazo Sazgar",
       source: "Google",
       rating: 5,
     },
