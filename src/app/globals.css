@@ -15,9 +15,9 @@
   --color-teal-500: #c3a14b;
   --color-teal-700: #8a6b2b;
   --color-gold-500: #c3a14b;
-  /* Brand teal for primary buttons and call-to-action surfaces. */
-  --color-brand: #00787a;
-  --color-brand-dark: #006b6d;
+  /* Brand gold (the favicon/logo gold) for primary buttons and accents. */
+  --color-brand: #c3a14b;
+  --color-brand-dark: #a6863a;
   --color-ivory: #f8f7f3;
   --color-sand: #f1efe8;
   --color-sand-dark: #e7e2d7;
@@ -130,7 +130,7 @@ body {
   @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-[0.95rem] font-semibold transition duration-200 ease-out;
 }
 @utility btn-primary {
-  @apply btn bg-brand text-white shadow-[0_8px_20px_-8px_rgb(0_120_122/0.5)] hover:-translate-y-px hover:bg-brand-dark active:translate-y-0;
+  @apply btn bg-brand text-navy-950 shadow-[0_8px_20px_-8px_rgb(26_25_23/0.35)] hover:-translate-y-px hover:bg-brand-dark active:translate-y-0;
 }
 @utility btn-light {
   @apply btn bg-white text-navy-900 hover:-translate-y-px hover:bg-ivory active:translate-y-0;

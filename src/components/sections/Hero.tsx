@@ -26,7 +26,7 @@ export function Hero() {
           <ul className="mt-9 grid gap-x-6 gap-y-3 border-t border-line pt-6 text-[0.93rem] font-medium text-ink sm:grid-cols-3 sm:gap-x-4 lg:grid-cols-1 xl:grid-cols-3">
             {hero.trustPoints.map((point) => (
               <li key={point} className="flex items-start gap-2.5">
-                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand text-white">
+                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand text-navy-950">
                   <CheckIcon className="h-3.5 w-3.5" strokeWidth={2.4} />
                 </span>
                 {point}

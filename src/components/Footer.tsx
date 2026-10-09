@@ -28,7 +28,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener"
                     aria-label={label}
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line text-navy-700 transition-colors hover:border-navy-800 hover:bg-ivory hover:text-brand"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line text-navy-700 transition-colors hover:border-navy-800 hover:bg-ivory hover:text-teal-700"
                   >
                     <Icon className="h-5 w-5" />
                   </a>
@@ -64,7 +64,7 @@ export function Footer() {
                   rel="noopener"
                   data-track="directions_click"
                   data-track-location="footer"
-                  className="font-semibold text-brand hover:text-brand-dark"
+                  className="font-semibold text-teal-700 hover:text-navy-900"
                 >
                   Route planen →<span className="sr-only"> (öffnet Google Maps in neuem Tab)</span>
                 </a>
