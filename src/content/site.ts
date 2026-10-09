@@ -113,6 +113,12 @@ export const images = {
     height: 2311,
     alt: "Heller, ruhiger Wartebereich der Zahnarztpraxis Zahnraum Flittard mit Sitzgelegenheiten, Holzboden und Pflanze",
   },
+  welcome: {
+    src: withBase("/images/zahnraum-brand-card.webp"),
+    width: 1000,
+    height: 1333,
+    alt: "Visitenkarte mit dem goldenen Logo von Zahnraum Flittard vor einer Pflanze",
+  },
 } as const;
 
 /** "Einblicke" gallery – real impressions from the practice. */
@@ -360,6 +366,129 @@ export const contact = {
     { value: "nachmittags", label: "Nachmittags" },
   ],
 };
+
+/** "So funktioniert's" – the path from first contact to the appointment. */
+export const bookingProcess = {
+  eyebrow: "So funktioniert's",
+  title: "In drei Schritten *zu Ihrem Termin*.",
+  intro: "Vom ersten Kontakt bis zum Besuch in der Praxis – so einfach kommen Sie zu uns.",
+  steps: [
+    {
+      image: "reception",
+      title: "Kontakt aufnehmen",
+      text: "Rufen Sie uns an oder senden Sie uns über das Formular eine Terminanfrage – ganz ohne Registrierung.",
+    },
+    {
+      image: "welcome",
+      title: "Termin abstimmen",
+      text: "Wir melden uns bei Ihnen und stimmen gemeinsam einen passenden Termin ab. Verbindlich ist er erst mit unserer Bestätigung.",
+    },
+    {
+      image: "consultation",
+      title: "Die Praxis besuchen",
+      text: `Am vereinbarten Tag empfangen wir Sie in unseren hellen Räumen in der ${practice.address.street} in ${practice.address.city}. Fragen vorab klären wir gern telefonisch.`,
+    },
+  ] as { image: keyof typeof images; title: string; text: string }[],
+};
+
+/**
+ * Patientenstimmen.
+ *
+ * ACHTUNG: Dies sind Platzhalter-Beispiele aus der Vorlage. Vor dem Livegang
+ * bitte durch echte, freigegebene Bewertungen der Praxis ersetzen (z. B. aus
+ * Google) – sonst nicht öffentlich anzeigen.
+ */
+export const testimonials = {
+  eyebrow: "Stimmen unserer Patient:innen",
+  title: "Was unsere Patientinnen und Patienten *sagen*.",
+  items: [
+    {
+      quote:
+        "Sehr nette Zahnärztin, die ihre Arbeit sehr gut macht und sich Zeit für die Patienten nimmt. Auch das Team ist ausgesprochen freundlich. Kann man nur weiterempfehlen.",
+      name: "Alex B.",
+      source: "Google",
+      rating: 5,
+    },
+    {
+      quote:
+        "Kompetent und einfühlsam – es wird sich immer ausreichend Zeit genommen. Freundliches Praxisteam, moderne Räume und eine super Organisation mit kurzen Wartezeiten.",
+      name: "Maria T.",
+      source: "Google",
+      rating: 5,
+    },
+    {
+      quote:
+        "Sehr herzlich und top Leistung. Man fühlt sich aufgehoben und wird immer freundlich empfangen – sowohl in der Praxis als auch am Telefon. Einfach rundum ein toller Service!",
+      name: "Michael R.",
+      source: "Google",
+      rating: 5,
+    },
+    {
+      quote:
+        "Fachlich sehr gut mit einem ausgesprochen tollen Team und guter Prophylaxe. Wir sind mit der ganzen Familie hier und immer sehr zufrieden. Kann man nur empfehlen.",
+      name: "Jennifer F.",
+      source: "Google",
+      rating: 5,
+    },
+    {
+      quote:
+        "Es wird alles verständlich erklärt und gut kommuniziert, dazu ein zuvorkommender Service. Komme auf jeden Fall wieder.",
+      name: "Richard S.",
+      source: "Google",
+      rating: 5,
+    },
+  ] as { quote: string; name: string; source?: string; rating?: number }[],
+};
+
+export type Faq = { q: string; a: string; confirmed: boolean; note?: string };
+
+export const faqs: Faq[] = [
+  {
+    q: "Wie kann ich einen Termin vereinbaren?",
+    a: `Am schnellsten erreichen Sie uns telefonisch unter ${practice.phone.display}. Alternativ vereinbaren Sie online über Doctolib oder senden Sie uns über das Formular auf dieser Seite eine Terminanfrage. Wir melden uns anschließend bei Ihnen, um einen passenden Termin abzustimmen.`,
+    confirmed: true,
+  },
+  {
+    q: "Ist mein Termin mit dem Absenden der Anfrage schon bestätigt?",
+    a: "Nein. Ihre Anfrage über das Formular ist zunächst unverbindlich. Wir melden uns bei Ihnen, um einen Termin abzustimmen – verbindlich ist er erst, wenn wir ihn Ihnen bestätigt haben.",
+    confirmed: true,
+  },
+  {
+    q: "Wann ist die Praxis geöffnet?",
+    a: "Montag und Dienstag von 8–14 und 15–18 Uhr, Donnerstag und Freitag von 8–15 Uhr. Mittwoch sowie am Wochenende ist die Praxis geschlossen.",
+    confirmed: true,
+  },
+  {
+    q: "Wo finde ich die Praxis?",
+    a: `Zahnraum Flittard befindet sich in der ${practice.address.street} in ${practice.address.postalCode} ${practice.address.city}. Über den Link „Route planen“ im Seitenfuß gelangen Sie direkt zur Wegbeschreibung.`,
+    confirmed: true,
+  },
+  {
+    q: "Welche Behandlungen bieten Sie an?",
+    a: "Unser Leistungsspektrum reicht von Vorsorge und professioneller Zahnreinigung über Füllungen, Wurzelkanal- und Parodontitis-Behandlung bis zu Zahnersatz, Implantaten, Oralchirurgie, Kinder- und Angstbehandlung sowie Ästhetik und Alignern. Welche Behandlung für Sie sinnvoll ist, besprechen wir nach einer Untersuchung persönlich mit Ihnen.",
+    confirmed: true,
+  },
+  {
+    q: "Ich habe Angst vor der Zahnbehandlung. Können Sie darauf eingehen?",
+    a: "Ja. Wir nehmen uns besonders viel Zeit für ängstliche Patient:innen, erklären jeden Schritt in Ruhe und behandeln einfühlsam. Auf Wunsch ist auch eine medikamentöse Beruhigung möglich. Sprechen Sie uns gern vorab darauf an.",
+    confirmed: true,
+  },
+  {
+    q: "Ich habe akute Zahnschmerzen – was soll ich tun?",
+    a: "Bitte rufen Sie uns während der Öffnungszeiten direkt an, damit wir das weitere Vorgehen mit Ihnen besprechen können. Das Anfrageformular ist für dringende Anliegen nicht geeignet. Außerhalb unserer Öffnungszeiten wenden Sie sich bitte an den zahnärztlichen Notdienst.",
+    confirmed: true,
+  },
+  // Entwurf: erst sichtbar, wenn die Praxis die Angaben bestätigt hat.
+  {
+    q: "Was sollte ich zum ersten Termin mitbringen?",
+    a: "[Antwort der Praxis erforderlich]",
+    confirmed: false,
+    note: "Z. B. Versichertenkarte, Bonusheft, Medikamentenliste – bitte bestätigen.",
+  },
+];
+
+/** FAQs shown on the page: drafts with placeholder answers are never rendered publicly. */
+export const visibleFaqs = faqs.filter((f) => !f.a.startsWith("[") || integrations.reviewMode);
 
 export const seo = {
   title: "Zahnraum Flittard – Zahnarztpraxis Dr. Shiwa Kadir in Köln-Flittard",

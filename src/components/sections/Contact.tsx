@@ -5,7 +5,7 @@ import { Rich } from "../Rich";
 
 export function Contact() {
   return (
-    <section id="kontakt" aria-labelledby="kontakt-title" className="bg-navy-900 py-20 text-white sm:py-24 lg:py-28">
+    <section id="kontakt" aria-labelledby="kontakt-title" className="bg-brand py-20 text-white sm:py-24 lg:py-28">
       <div className="container-page grid gap-12 lg:grid-cols-12 lg:gap-14">
         <div className="lg:col-span-5">
           <p className="eyebrow-dark">{contact.eyebrow}</p>

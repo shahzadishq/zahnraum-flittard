@@ -3,9 +3,12 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Intro } from "@/components/sections/Intro";
 import { Services } from "@/components/sections/Services";
+import { Process } from "@/components/sections/Process";
 import { Reasons } from "@/components/sections/Reasons";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Gallery } from "@/components/sections/Gallery";
 import { Team } from "@/components/sections/Team";
+import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
 import { images, integrations, practice, seo, withBase } from "@/content/site";
 
@@ -48,9 +51,12 @@ export default function Home() {
         <Hero />
         <Intro />
         <Services />
+        <Process />
         <Reasons />
+        <Testimonials />
         <Gallery />
         <Team />
+        <Faq />
         <Contact />
       </main>
       <Footer />

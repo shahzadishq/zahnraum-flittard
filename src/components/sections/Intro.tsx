@@ -37,7 +37,7 @@ export function Intro() {
           <ul className="mt-8 space-y-3">
             {intro.points.map((point) => (
               <li key={point} className="flex items-start gap-3 font-medium text-ink">
-                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-800 text-white">
+                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand text-white">
                   <CheckIcon className="h-3.5 w-3.5" strokeWidth={2.4} />
                 </span>
                 {point}

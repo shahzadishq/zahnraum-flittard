@@ -6,7 +6,7 @@ export function Reasons() {
   return (
     <section
       aria-labelledby="gruende-title"
-      className="relative overflow-hidden bg-navy-900 py-20 text-white sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-brand py-20 text-white sm:py-24 lg:py-28"
     >
       {/* the brand's tooth-and-leaf mark, as a quiet background motif */}
       <svg
@@ -48,7 +48,7 @@ export function Reasons() {
           {reasons.items.map((item, i) => (
             <li
               key={item.title}
-              className="bg-navy-900 p-7 transition-colors duration-300 hover:bg-navy-800 sm:p-8"
+              className="bg-brand p-7 transition-colors duration-300 hover:bg-brand-dark sm:p-8"
             >
               <span className="text-sm font-extrabold tracking-[0.14em] text-teal-300" aria-hidden="true">
                 {String(i + 1).padStart(2, "0")}
